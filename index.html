@@ -105,7 +105,7 @@
                         <div class="text-left col s12 l9">
                             <div class="col s12 l12">
                                 <div>
-                                    <span class="cv-subtitle light-green-text text-darken-3">Software Developer</span>
+                                    <span class="cv-subtitle light-green-text text-darken-3">Website Developer</span>
                                     <span class="new badge light-green" data-badge-caption="March 2016 - Present"></span>
                                 </div>
                                 <div>
@@ -396,9 +396,16 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
 <script src="js/script.js"></script>
 <script>
-     function print_doc(e) {
-        window.print();
-    }
+     function printDiv() { 
+            var divContents = document.getElementById("cv-printable").innerHTML; 
+            var a = window.open('', '', 'height=500, width=500'); 
+            a.document.write('<html>'); 
+            a.document.write('<body > <h1>Div contents are <br>'); 
+            a.document.write(divContents); 
+            a.document.write('</body></html>'); 
+            a.document.close(); 
+            a.print(); 
+        } 
 </script>
 
 </html>
